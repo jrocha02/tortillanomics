@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: dim_city
+    description: "One row per (estado_raw, ciudad_raw) observed in the data, enriched with canonical names, INEGI state codes, region, and population."
+    columns:
+      - name: city_id
+        description: "Surrogate key. Hash of (estado_raw, ciudad_raw)."
+        tests: [unique, not_null]
+      - name: estado_raw
+        tests: [not_null]
+      - name: ciudad_raw
+        tests: [not_null]
+      - name: ciudad_canonical
+        tests: [not_null]
+      - name: inegi_state_code
+        tests: [not_null]
+
+  - name: fct_tortilla_prices_daily
+    description: "Daily tortilla prices per city and channel. Grain: one row per (city_id, fecha, canal)."
+    columns:
+      - name: price_id
+        tests: [unique, not_null]
+      - name: city_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_city')
+              field: city_id
+      - name: fecha
+        tests: [not_null]
+      - name: canal
+        tests: [not_null]
+      - name: precio_kg
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              max_value: 100
+
+  - name: mart_price_inflation
+    description: "Monthly avg price per city/channel with MoM and YoY inflation."
+    columns:
+      - name: city_id
+        tests: [not_null]
+      - name: mes
+        tests: [not_null]
+      - name: precio_mensual
+        tests: [not_null]
+
+  - name: mart_price_dispersion
+    description: "Monthly price dispersion across cities, per channel."
+    columns:
+      - name: mes
+        tests: [not_null]
+      - name: canal
+        tests: [not_null]
+      - name: n_ciudades
+        tests: [not_null]
+
+  - name: mart_channel_gap
+    description: "Monthly tortilleria vs autoservicio price gap per city."
+    columns:
+      - name: city_id
+        tests: [not_null]
+      - name: mes
+        tests: [not_null]

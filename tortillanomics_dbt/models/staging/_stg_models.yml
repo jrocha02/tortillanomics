@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_sniim__tortilla_prices
+    description: "Cleaned per-city daily tortilla prices."
+    columns:
+      - name: price_id
+        tests: [unique, not_null]
+      - name: estado_raw
+        tests: [not_null]
+      - name: ciudad_raw
+        tests: [not_null]
+      - name: fecha
+        tests: [not_null]
+      - name: precio_kg
+        tests: [not_null]
+      - name: canal
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["tortillerias", "autoservicios"]

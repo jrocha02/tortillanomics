@@ -1,0 +1,27 @@
+version: 2
+
+seeds:
+  - name: cities
+    description: "Canonical city/state mapping with INEGI codes, region, population. Joins to staging on (estado_raw, ciudad_raw)."
+    config:
+      column_types:
+        inegi_state_code: varchar
+        population_2020: integer
+        is_zona_metropolitana: boolean
+    columns:
+      - name: estado_raw
+        tests: [not_null]
+      - name: ciudad_raw
+        tests: [not_null]
+      - name: ciudad_canonical
+        tests: [not_null]
+      - name: inegi_state_code
+        tests: [not_null]
+      - name: region
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Norte", "Centro-Norte", "Centro", "Occidente", "Sur"]
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [estado_raw, ciudad_raw]

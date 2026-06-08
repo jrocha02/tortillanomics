@@ -1,0 +1,19 @@
+version: 2
+sources:
+  - name: sniim
+    description: "Raw scraped data from SNIIM (Sistema Nacional de Información e Integración de Mercados)"
+    meta:
+      external_location: "read_parquet('../data/raw/tortilla/**/*.parquet', hive_partitioning=true)"
+    tables:
+      - name: tortilla_prices
+        description: "One row per (estado, ciudad, fecha, canal). Scraped from SNIIM monthly Excel reports."
+        columns:
+          - name: estado
+          - name: ciudad
+          - name: fecha
+          - name: precio_kg
+          - name: canal
+          - name: anio
+          - name: mes
+          - name: scraped_at
+          - name: source_url

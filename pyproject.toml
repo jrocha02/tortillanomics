@@ -1,0 +1,26 @@
+[project]
+name = "tortillanomics"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dbt-duckdb>=1.10.1",
+    "duckdb>=1.5.3",
+    "httpx>=0.28.1",
+    "lxml>=6.1.1",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.3",
+    "pyarrow>=24.0.0",
+    "xlrd>=2.0.2",
+]
+
+[dependency-groups]
+dev = [
+    "dbt>=1.0.0.40.17",
+    "duckdb>=1.5.3",
+    "httpx>=0.28.1",
+    "openpyxl>=3.1.5",
+    "pyarrow>=24.0.0",
+    "ruff>=0.15.16",
+]

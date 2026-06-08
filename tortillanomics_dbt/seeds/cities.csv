@@ -1,0 +1,57 @@
+estado_raw,ciudad_raw,estado_canonical,ciudad_canonical,inegi_state_code,region,population_2020,is_zona_metropolitana
+Aguascalientes,Aguascalientes,Aguascalientes,Aguascalientes,01,Centro-Norte,,false
+Baja California,Mexicali,Baja California,Mexicali,02,Norte,,false
+Baja California,Tijuana,Baja California,Tijuana,02,Norte,,false
+Baja California Sur,La Paz,Baja California Sur,La Paz,03,Norte,,false
+Campeche,Campeche,Campeche,Campeche,04,Sur,,false
+Chiapas,Tapachula,Chiapas,Tapachula,07,Sur,,false
+Chiapas,Tuxtla Gutiérrez,Chiapas,Tuxtla Gutiérrez,07,Sur,,false
+Chihuahua,Cd. Juárez,Chihuahua,Ciudad Juárez,08,Norte,,false
+Chihuahua,Chihuahua,Chihuahua,Chihuahua,08,Norte,,false
+Coahuila,Piedras Negras,Coahuila,Piedras Negras,05,Norte,,false
+Coahuila,Saltillo,Coahuila,Saltillo,05,Norte,,false
+Coahuila,Torreón,Coahuila,Torreón,05,Norte,,false
+Colima,Colima,Colima,Colima,06,Occidente,,false
+D.F.,D.F.,Ciudad de México,Ciudad de México,09,Centro,,false
+D.F.,ZM D.F.,Ciudad de México,ZM Valle de México,09,Centro,,true
+Durango,Durango,Durango,Durango,10,Norte,,false
+Durango,Gómez Palacio,Durango,Gómez Palacio,10,Norte,,false
+Edo. México,Toluca,México,Toluca,15,Centro,,false
+Guanajuato,Celaya,Guanajuato,Celaya,11,Centro-Norte,,false
+Guanajuato,Irapuato,Guanajuato,Irapuato,11,Centro-Norte,,false
+Guanajuato,León,Guanajuato,León,11,Centro-Norte,,false
+Guerrero,Acapulco,Guerrero,Acapulco,12,Sur,,false
+Guerrero,Chilpancingo,Guerrero,Chilpancingo,12,Sur,,false
+Hidalgo,Pachuca,Hidalgo,Pachuca,13,Centro,,false
+Jalisco,Guadalajara,Jalisco,Guadalajara,14,Occidente,,false
+Jalisco,ZM Guadalajara,Jalisco,ZM Guadalajara,14,Occidente,,true
+Michoacán,Morelia,Michoacán,Morelia,16,Occidente,,false
+Morelos,Cuernavaca,Morelos,Cuernavaca,17,Centro,,false
+Nayarit,Tepic,Nayarit,Tepic,18,Occidente,,false
+Nuevo León,Monterrey,Nuevo León,Monterrey,19,Norte,,false
+Nuevo León,ZM Monterrey,Nuevo León,ZM Monterrey,19,Norte,,true
+Oaxaca,Oaxaca,Oaxaca,Oaxaca,20,Sur,,false
+Puebla,Puebla,Puebla,Puebla,21,Centro,,false
+Puebla,ZM Puebla,Puebla,ZM Puebla,21,Centro,,true
+Querétaro,Querétaro,Querétaro,Querétaro,22,Centro-Norte,,false
+Quintana Roo,Cancún,Quintana Roo,Cancún,23,Sur,,false
+Quintana Roo,Chetumal,Quintana Roo,Chetumal,23,Sur,,false
+San Luis Potosí,San Luis Potosí,San Luis Potosí,San Luis Potosí,24,Centro-Norte,,false
+Sinaloa,Culiacán,Sinaloa,Culiacán,25,Norte,,false
+Sonora,Cd. Obregón,Sonora,Ciudad Obregón,26,Norte,,false
+Sonora,Hermosillo,Sonora,Hermosillo,26,Norte,,false
+Sonora,Nogales,Sonora,Nogales,26,Norte,,false
+Sonora,San Luis Río Colorado,Sonora,San Luis Río Colorado,26,Norte,,false
+Tabasco,Villahermosa,Tabasco,Villahermosa,27,Sur,,false
+Tamaulipas,Cd. Victoria,Tamaulipas,Ciudad Victoria,28,Norte,,false
+Tamaulipas,Matamoros,Tamaulipas,Matamoros,28,Norte,,false
+Tamaulipas,Nuevo Laredo,Tamaulipas,Nuevo Laredo,28,Norte,,false
+Tamaulipas,Reynosa,Tamaulipas,Reynosa,28,Norte,,false
+Tamaulipas,Tampico,Tamaulipas,Tampico,28,Norte,,false
+Tlaxcala,Tlaxcala,Tlaxcala,Tlaxcala,29,Centro,,false
+Veracruz,Coatzacoalcos,Veracruz,Coatzacoalcos,30,Sur,,false
+Veracruz,Poza Rica,Veracruz,Poza Rica,30,Sur,,false
+Veracruz,Veracruz,Veracruz,Veracruz,30,Sur,,false
+Veracruz,Xalapa,Veracruz,Xalapa,30,Sur,,false
+Yucatán,Mérida,Yucatán,Mérida,31,Sur,,false
+Zacatecas,Zacatecas,Zacatecas,Zacatecas,32,Centro-Norte,,false

@@ -1,0 +1,29 @@
+name: "tortillanomics_dbt"
+version: "1.0.0"
+
+profile: "tortillanomics_dbt"
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets: # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+models:
+  tortillanomics_dbt:
+    staging:
+      materialized: view
+      +schema: staging
+    intermediate:
+      materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts
+seeds:
+  tortillanomics_dbt:
+    +schema: seeds
