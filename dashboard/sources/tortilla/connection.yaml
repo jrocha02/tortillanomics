@@ -1,0 +1,5 @@
+name: tortilla
+type: duckdb
+options:
+  filename: ":memory:"
+  extensions: [httpfs]
