@@ -14,19 +14,6 @@ SNIIM publica precios de tortilla **tres veces por semana** (lunes, miércoles y
 
 ## Arquitectura
 
-```mermaid
-flowchart LR
-    A[SNIIM] -->|scraper Python| B[Parquet particionado]
-    B -->|dbt build| C[DuckDB local]
-    C -->|dbt run| D[Marts]
-    D --> E[Parquet publicado]
-    D --> F[Dashboard Evidence]
-    D --> G[Documentación dbt]
-    
-    E --> H[GitHub Releases]
-    F --> I[GitHub Pages]
-    G --> I
-```
 
 El pipeline corre automáticamente vía GitHub Actions tres veces por semana (martes, jueves y sábado a las 2 AM hora del centro de México), un día después de cada publicación de SNIIM.
 
@@ -90,7 +77,6 @@ Antes de citar estos números en cualquier análisis, vale la pena saber:
 Todo el código es público y reproducible:
 
 - **Repositorio**: [github.com/jrocha02/tortillanomics](https://github.com/jrocha02/tortillanomics)
-- **Documentación de modelos dbt**: [/dbt-docs/](/dbt-docs/)
 - **Última actualización**: el sitio se reconstruye automáticamente; revisa los [GitHub Actions](https://github.com/jrocha02/tortillanomics/actions) para timestamps específicos.
 
 Para clonar y construir localmente:
