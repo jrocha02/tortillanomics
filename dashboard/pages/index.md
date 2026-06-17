@@ -42,11 +42,17 @@ ORDER BY mes
 />
 
 ```sql precio_actual
-SELECT
+SELECT 
+    ciudad_canonical as ciudad,
+    estado_canonical as estado,
+    region,
     canal,
-    AVG(precio_mensual) AS precio,
-    AVG(inflacion_yoy) AS inflacion_yoy
+    precio_mensual AS precio,
+    inflacion_yoy
 FROM tortilla.inflation
 WHERE mes = (SELECT MAX(mes) FROM tortilla.inflation)
-GROUP BY canal
+  AND ciudad_canonical IS NOT NULL
+  AND canal = 'tortillerias'
+ORDER BY precio_mensual DESC
+LIMIT 15
 ```
