@@ -18,7 +18,7 @@ import pandas as pd
 BASE_URL = "https://www.economia-sniim.gob.mx/TortillaMesPorDia.asp"
 DATA_ROOT = Path(__file__).resolve().parents[1] / "data" / "raw" / "tortilla"
 
-CHANNELS = {"todos": 1, "autoservicios": 2, "tortillerias": 3}
+CHANNELS = {"todos": 3, "autoservicios": 2, "tortillerias": 1}
 
 logger = logging.getLogger(__name__)
 
